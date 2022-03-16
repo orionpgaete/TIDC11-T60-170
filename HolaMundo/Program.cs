@@ -10,10 +10,14 @@ namespace HolaMundo
     {
         static void Main(string[] args)
         {
+            //uso de la consola
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Clear();
             Console.WriteLine("Hola Mundo");
             Console.WriteLine("Ingrese Nombre:");
-            string nombre = Console.ReadLine();
-            Console.WriteLine("Su nombre es {0} ", nombre);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("INACAP");
             Console.ReadKey();
         }
     }

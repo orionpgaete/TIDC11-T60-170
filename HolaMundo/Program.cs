@@ -15,10 +15,20 @@ namespace HolaMundo
             string nombre = Console.ReadLine().Trim();
             Console.WriteLine("Ingrese edad:");
             string edadTx = Console.ReadLine().Trim();
-            // Trim()  = elimina espacios todos
-            // TrimStart() = elimina espacios inicio
-            // TrimEnd() = elimina espacios final 
-            Console.WriteLine("su nombre es {0} y su edad {1}", nombre, edadTx);
+            //int edad = Int32.Parse(edadTx);
+            int edad = -1;
+            bool esValido = Int32.TryParse(edadTx, out edad);
+            if (!esValido)
+            {
+                Console.WriteLine("ingrese bien la edad");
+            }
+            else
+            {
+                Console.WriteLine("su nombre es {0} y su edad {1}", nombre, edadTx);
+            }
+
+
+            
             Console.ReadKey();
         }
     }

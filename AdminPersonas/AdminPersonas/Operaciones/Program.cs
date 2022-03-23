@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdminPersonasModel.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,12 +11,20 @@ namespace AdminPersonas
     {
         static void MostrarPersonas()
         {
+            List<Persona> personas = new PersonasDAL().ObtenerPersonas();
+            for (int i=0; i < personas.Count(); i++)
+            {
+                Persona actual = personas[i];
+                Console.WriteLine("{0} : Nombre : {1}, y su Peso : {2}", i, actual.Nombre, actual.Peso);
+            }
 
         }
 
         static void BuscarPersonas()
         {
-
+            Console.WriteLine("Ingrese nombre");
+            List<Persona> filtradas = new PersonasDAL().FiltrarPersonas(Console.ReadLine().Trim());
+            filtradas.ForEach(p => Console.WriteLine("Nombre : {0}, y su Peso : {1}", p.Nombre, p.Peso));
         }
         static void IngresarPersona()
         {
@@ -56,11 +65,13 @@ namespace AdminPersonas
             } while (nombre.Equals(string.Empty));
 
             Persona p = new Persona()
-            { Nombre =};
+            { Nombre = nombre, Estatura= estatura, Telefono= telefono, Peso= peso};
             /*p.Nombre = nombre;
             p.Estatura = estatura;
             p.Peso = peso;
             p.Telefono = telefono;*/
+
+            new PersonasDAL().AgregarPersona(p);
 
             Console.WriteLine("Nombre : {0}", p.Nombre);
             Console.WriteLine("Telefono : {0}", p.Telefono);

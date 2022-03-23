@@ -55,16 +55,21 @@ namespace AdminPersonas
                 nombre = Console.ReadLine().Trim();
             } while (nombre.Equals(string.Empty));
 
-            Persona p = new Persona();
+            Persona p = new Persona()
+            { Nombre =};
+            /*p.Nombre = nombre;
+            p.Estatura = estatura;
+            p.Peso = peso;
+            p.Telefono = telefono;*/
 
-            Console.WriteLine("Nombre : {0}", nombre);
-            Console.WriteLine("Telefono : {0}", telefono);
-            Console.WriteLine("Peso : {0}", peso);
-            Console.WriteLine("Estatura : {0}", estatura);
+            Console.WriteLine("Nombre : {0}", p.Nombre);
+            Console.WriteLine("Telefono : {0}", p.Telefono);
+            Console.WriteLine("Peso : {0}", p.Peso);
+            Console.WriteLine("Estatura : {0}", p.Estatura);
             Console.WriteLine("IMC : {0}", peso / (estatura * estatura));
             Console.ReadKey();
 
-
+            //https://github.com/orionpgaete/TIDC11-T60-170
         }
     }
 }

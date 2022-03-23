@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPersonas", "AdminPersonas\AdminPersonas.csproj", "{97713192-152D-454C-AC49-88E05D0373EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPersonasModel", "AdminPersonasModel\AdminPersonasModel.csproj", "{2FEFB5BE-5502-4D26-8F4C-02186CC872BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97713192-152D-454C-AC49-88E05D0373EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97713192-152D-454C-AC49-88E05D0373EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97713192-152D-454C-AC49-88E05D0373EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97713192-152D-454C-AC49-88E05D0373EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FEFB5BE-5502-4D26-8F4C-02186CC872BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FEFB5BE-5502-4D26-8F4C-02186CC872BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FEFB5BE-5502-4D26-8F4C-02186CC872BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FEFB5BE-5502-4D26-8F4C-02186CC872BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D36A993F-FE1C-4FE7-BCB5-FD5BF82C0023}
+	EndGlobalSection
+EndGlobal

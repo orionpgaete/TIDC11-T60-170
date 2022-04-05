@@ -9,7 +9,7 @@ namespace AdminPersonas
 {
     public partial class Program
     {
-        static PersonasDAL personasDAL = new PersonasDAL();
+        static IPersonasDAL personasDAL = new PersonasDALObjetos();
         static void MostrarPersonas()
         {
             List<Persona> personas = personasDAL.ObtenerPersonas();

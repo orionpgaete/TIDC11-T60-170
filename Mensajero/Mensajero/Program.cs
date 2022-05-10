@@ -1,4 +1,5 @@
 ﻿using MensajeroModel.DAL;
+using MensajeroModel.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,16 +32,31 @@ namespace Mensajero
         }
         static void Main(string[] args)
         {
+            while (Menu()) ;
         }
 
         static void Ingresar()
         {
-
+            Console.WriteLine("Ingrese nombre: ");
+            string nombre = Console.ReadLine().Trim();
+            Console.WriteLine("Ingrese texto :");
+            string texto = Console.ReadLine().Trim();
+            Mensaje mensaje = new Mensaje()
+            {
+                Nombre = nombre,
+                Texto = texto,
+                Tipo = "Aplicacion"
+            };
+            mensajesDAL.AgregarMensaje(mensaje);
         }
 
         static void Mostrar()
         {
-
+            List<Mensaje> mensajes = mensajesDAL.ObtenerMensajes();
+            foreach(Mensaje mensaje in mensajes)
+            {
+                Console.WriteLine(mensaje);
+            }
         }
 
     }

@@ -49,8 +49,7 @@ namespace MensajeroModel.DAL
 
         public List<Mensaje> ObtenerMensajes()
         {
-
-            List<Mensaje> lista = new List<Mensaje>();
+           List<Mensaje> lista = new List<Mensaje>();
             try
             {
                 using(StreamReader reader = new StreamReader(archivo))

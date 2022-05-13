@@ -14,6 +14,7 @@ namespace ServerSocketUtils
         private StreamReader reader;
         private StreamWriter writer;
         public ClienteCom(Socket socket)
+
         {
             this.cliente = socket;
             Stream stream = new NetworkStream(this.cliente);

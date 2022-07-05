@@ -27,6 +27,11 @@ namespace StarCapWeb
             this.grillaClientes.DataBind();
         }
 
+        private void cargarGrilla(List<Cliente> filtrada)
+        {
+            this.grillaClientes.DataSource = filtrada;
+            this.grillaClientes.DataBind();
+        }
         protected void grillaClientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if(e.CommandName == "eliminar")
@@ -36,6 +41,18 @@ namespace StarCapWeb
                 string rut = Convert.ToString(e.CommandArgument);
                 clienteDAL.Eliminar(rut);
                 cargaGrilla();
+            }
+        }
+
+        protected void nivelDdl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(this.nivelDdl.SelectedItem != null)
+            {
+                int nivel = Convert.ToInt32(this.nivelDdl.SelectedItem.Value);
+                //filtrar por nivel
+                List<Cliente> filtrada = clienteDAL.Filtrar(nivel);
+                cargarGrilla(filtrada);
+
             }
         }
     }

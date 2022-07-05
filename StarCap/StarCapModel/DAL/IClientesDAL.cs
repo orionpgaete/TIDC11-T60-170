@@ -12,5 +12,7 @@ namespace StarCapModel.DAL
         void Agregar(Cliente cliente);
 
         void Eliminar(string rut);
+
+        List<Cliente> Filtrar(int nivel);
     }
 }

@@ -20,6 +20,11 @@ namespace StarCapModel.DAL
             clientes.Remove(eliminado);
         }
 
+        public List<Cliente> Filtrar(int nivel)
+        {
+            return clientes.FindAll(c => c.Nivel == nivel);
+
+        }
         public List<Cliente> Obtener()
         {
             return clientes;

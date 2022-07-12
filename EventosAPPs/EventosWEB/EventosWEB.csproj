@@ -121,6 +121,12 @@
     </None>
     <Content Include="Web.sitemap" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventosModel\EventosModel.csproj">
+      <Project>{7BB06748-D36A-4C2F-91FF-70625832CD60}</Project>
+      <Name>EventosModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

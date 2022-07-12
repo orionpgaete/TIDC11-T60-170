@@ -38,7 +38,7 @@
                         <label for="regionDDL">Region</label>
                         <asp:DropDownList ID="regionDDL" runat="server"></asp:DropDownList>
                     </div>
-                    <asp:Button runat="server" CssClass="btn btn-secondary" OnClick="ingresarBtn_Click" ID="ingresarBtn" Text="Ingresar" />
+                    <asp:Button runat="server" CssClass="btn btn-secondary"  OnClick="ingresarBtn_Click" ID="ingresarBtn" Text="Ingresar" />
                     
                 </div>
             </div>

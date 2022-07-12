@@ -2,12 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="row">
             <div class="col-lg-6 mx-auto">
-                <asp:DropDownList ID="estadoDDL" runat="server" Enabled="false" AutoPostBack="true" OnSelectedIndexChanged="estadoDDL_SelectedIndexChanged">
+                <asp:DropDownList ID="estadoDDL" runat="server" Enabled="false" AutoPostBack="true" >
                     <asp:ListItem Text="Pagada" Value="Pagada"></asp:ListItem>
                     <asp:ListItem Text="Con Deuda" Value="conDeuda"></asp:ListItem>
                 </asp:DropDownList>
                <asp:CheckBox runat="server" ID="todosChk" Text="Todos" Checked="true" 
-                   AutoPostBack="true" OnCheckedChanged="todosChk_CheckedChanged"/>
+                   AutoPostBack="true" />
  
             </div>
                <div class="row mt-5">
@@ -17,7 +17,6 @@
                         AutoGenerateColumns="false"
                         ShowHeaderWhenEmpty="true"
                         EmptyDataText="No hay registros"
-                        OnRowCommand="grillaAsistente_RowCommand"
                         runat="server">
                         <Columns>
                             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />

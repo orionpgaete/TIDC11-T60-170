@@ -27,6 +27,7 @@ namespace EventosWEB
 
         protected void ingresarBtn_Click(object sender, EventArgs e)
         {
+
             Asistente asistente = new Asistente();
             asistente.Rut = this.rutTxt.Text.Trim();
             asistente.Nombre = this.nombreTxt.Text.Trim();
